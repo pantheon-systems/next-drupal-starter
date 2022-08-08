@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function Header() {
+
   return (
     <div className="my-0 pt-10 px-5 text-xl">
       <nav>
@@ -9,6 +10,7 @@ export default function Header() {
             ["🏠 Home", "/"],
             ["📰 Articles", "/articles"],
             ["📑 Pages", "/pages"],
+            ["📑 Examples", "/examples"],
           ].map(([title, href]) => (
             <li className={`${href === "/" ? "mr-auto" : "mx-4"}`} key={href}>
               <Link className="font-sans" href={href}>

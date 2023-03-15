@@ -8,44 +8,7 @@ import umamiEsArticles from './data/umamiEsArticles.json';
 import umamiPreview from './data/umamiPreview.json';
 import umamiEsPreview from './data/umamiEsPreview.json';
 
-import defaultApiIndex from './data/defaultProfileApiIndex.json';
-import defaultArticles from './data/defaultProfileArticles.json';
-import defaultPreview from './data/defaultProfilePreview.json';
-
 import oauthToken from './data/oauthToken.json';
-
-const defaultProfileHandlers = [
-	{
-		endpoint: 'https://default/jsonapi/',
-		mockData: defaultApiIndex,
-		method: 'get',
-		status: 200,
-	},
-	{
-		endpoint: 'https://default/jsonapi/node/article',
-		mockData: defaultArticles,
-		method: 'get',
-		status: 200,
-	},
-	{
-		endpoint: 'https://default/jsonapi/node/x',
-		mockData: {},
-		method: 'get',
-		status: 200,
-	},
-	{
-		endpoint:
-			'https://default/jsonapi/decoupled-preview/1_d4b52b83-e92a-4a4f-b2de-647ecb9fb6d0',
-		mockData: defaultPreview,
-		method: 'get',
-		status: 200,
-	},
-	{
-		endpoint: 'https://default/jsonapi/decoupled-preview/xxxx',
-		method: 'get',
-		status: 404,
-	},
-];
 
 const umamiProfileHandlers = [
 	{
@@ -94,7 +57,7 @@ const umamiProfileHandlers = [
 
 const sharedHandlers = [
 	{
-		endpoint: `https://${PROFILE}/oauth/token`,
+		endpoint: `https://umami/oauth/token`,
 		mockData: oauthToken,
 		method: 'post',
 		status: 200,
@@ -103,7 +66,6 @@ const sharedHandlers = [
 
 //construct restHandlers
 export const restHandlers = [
-	...defaultProfileHandlers,
 	...umamiProfileHandlers,
 	...sharedHandlers,
 ].map(({ endpoint, mockData, method, status }) => {
@@ -117,7 +79,7 @@ process.env = {
 	__NEXT_IMAGE_OPTS: {
 		deviceSizes: [320, 420, 768, 1024, 1200],
 		imageSizes: [],
-		domains: [PROFILE],
+		domains: 'umami',
 		path: '/_next/image',
 		loader: 'default',
 	},

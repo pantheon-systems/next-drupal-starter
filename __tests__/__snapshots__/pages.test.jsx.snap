@@ -1,6 +1,6 @@
 // Vitest Snapshot v1
 
-exports[`default <PageListTemplate /> > should render with default profile pages 1`] = `
+exports[`<PageListTemplate /> > should render pages 1`] = `
 <DocumentFragment>
   <div
     class="min-h-screen max-h-screen min-w-screen max-w-screen flex flex-col overflow-x-hidden"
@@ -76,12 +76,12 @@ exports[`default <PageListTemplate /> > should render with default profile pages
             class="prose justify-items-start mt-8"
           >
             <h2>
-              Test Page With Embedded Image-test page-local
+              About Umami
             </h2>
             <div />
             <a
               class="font-normal underline"
-              href="/pages/test-page-embedded-image-test-page-local"
+              href="/about-umami"
             >
               Read more →
             </a>
@@ -90,12 +90,26 @@ exports[`default <PageListTemplate /> > should render with default profile pages
             class="prose justify-items-start mt-8"
           >
             <h2>
-              My Page-preview test
+              Top Level Page
             </h2>
             <div />
             <a
               class="font-normal underline"
-              href="/pages/my-page-preview-test"
+              href="/about"
+            >
+              Read more →
+            </a>
+          </li>
+          <li
+            class="prose justify-items-start mt-8"
+          >
+            <h2>
+              Nested Top Level Page
+            </h2>
+            <div />
+            <a
+              class="font-normal underline"
+              href="/nested/page"
             >
               Read more →
             </a>
@@ -115,9 +129,29 @@ exports[`default <PageListTemplate /> > should render with default profile pages
           >
             <a
               class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
-              href="/"
+              href="/en"
             >
               Home
+            </a>
+          </li>
+          <li
+            class="ps-list-disc ps-text-blue-300"
+          >
+            <a
+              class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
+              href="/en/articles"
+            >
+              Articles
+            </a>
+          </li>
+          <li
+            class="ps-list-disc ps-text-blue-300"
+          >
+            <a
+              class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
+              href="/en/recipes"
+            >
+              Recipes
             </a>
           </li>
         </ul>
@@ -149,7 +183,7 @@ exports[`default <PageListTemplate /> > should render with default profile pages
 </DocumentFragment>
 `;
 
-exports[`default <PageTemplate /> > should render with default profile page 1`] = `
+exports[`<PageTemplate /> > should render page 1`] = `
 <DocumentFragment>
   <div
     class="min-h-screen max-h-screen min-w-screen max-w-screen flex flex-col overflow-x-hidden"
@@ -211,7 +245,7 @@ exports[`default <PageTemplate /> > should render with default profile page 1`] 
         class="prose lg:prose-xl mt-10 mx-auto"
       >
         <h1>
-          Test Page With Embedded Image-test page-local
+          About Umami
         </h1>
         <a
           class="font-normal"
@@ -224,16 +258,21 @@ exports[`default <PageTemplate /> > should render with default profile page 1`] 
         >
           <div>
             <p>
-              <img
-                alt="Drupal on NPM"
-                data-entity-type="file"
-                data-entity-uuid="85adb65f-7111-42ae-aaa2-1d82e92d5785"
-                height="968"
-                loading="lazy"
-                src="/sites/default/files/inline-images/%40drupal-npm.png"
-                width="3138"
-              />
+              Umami is a fictional food magazine that has been created to demonstrate how you might build a Drupal site using functionality provided 'out of the box'.
             </p>
+            
+
+            <p>
+              For more information visit 
+              <a
+                href="https://www.drupal.org/docs/umami-drupal-demonstration-installation-profile"
+              >
+                https://www.drupal.org/docs/umami-drupal-demonstration-installation-profile
+              </a>
+              .
+            </p>
+            
+
           </div>
         </div>
       </article>
@@ -250,9 +289,29 @@ exports[`default <PageTemplate /> > should render with default profile page 1`] 
           >
             <a
               class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
-              href="/"
+              href="/en"
             >
               Home
+            </a>
+          </li>
+          <li
+            class="ps-list-disc ps-text-blue-300"
+          >
+            <a
+              class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
+              href="/en/articles"
+            >
+              Articles
+            </a>
+          </li>
+          <li
+            class="ps-list-disc ps-text-blue-300"
+          >
+            <a
+              class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
+              href="/en/recipes"
+            >
+              Recipes
             </a>
           </li>
         </ul>

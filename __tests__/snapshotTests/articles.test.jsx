@@ -18,16 +18,10 @@ vi.mock('next/router', () => ({
  * @vitest-environment jsdom
  */
 
-describe(`${PROFILE} <SSRArticlesListTemplate />`, () => {
-	it(`should render with ${PROFILE} profile articles`, () => {
-		const data =
-			PROFILE === 'umami'
-				? { articles: umamiEnArticlesData, footerMenu: umamiFooterMenu }
-				: {
-						articles: defaultProfileArticlesData,
-						footerMenu: defaultProfileFooterMenu,
-				  };
-
+describe('<SSRArticlesListTemplate />', () => {
+	it(`should render articles`, () => {
+		const data = { articles: umamiEnArticlesData, footerMenu: umamiFooterMenu }
+		
 		const { asFragment } = render(
 			<SSRArticlesListTemplate
 				sortedArticles={data.articles}
@@ -37,15 +31,9 @@ describe(`${PROFILE} <SSRArticlesListTemplate />`, () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 });
-describe(`${PROFILE} <ArticleTemplate />`, () => {
-	it(`should render with ${PROFILE} profile articles`, () => {
-		const data =
-			PROFILE === 'umami'
-				? { article: umamiEnArticlesData[0], footerMenu: umamiFooterMenu }
-				: {
-						article: defaultProfileArticlesData[0],
-						footerMenu: defaultProfileFooterMenu,
-				  };
+describe('<ArticleTemplate />', () => {
+	it(`should render articles`, () => {
+		const data = { article: umamiEnArticlesData[0], footerMenu: umamiFooterMenu }
 
 		const { asFragment } = render(
 			<ArticleTemplate article={data.article} footerMenu={data.footerMenu} />,

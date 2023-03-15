@@ -1,6 +1,6 @@
 // Vitest Snapshot v1
 
-exports[`umami <ArticleTemplate /> > should render with umami profile articles 1`] = `
+exports[`<ArticleTemplate /> > should render articles 1`] = `
 <DocumentFragment>
   <div
     class="min-h-screen max-h-screen min-w-screen max-w-screen flex flex-col overflow-x-hidden"
@@ -237,7 +237,7 @@ exports[`umami <ArticleTemplate /> > should render with umami profile articles 1
 </DocumentFragment>
 `;
 
-exports[`umami <SSRArticlesListTemplate /> > should render with umami profile articles 1`] = `
+exports[`<SSRArticlesListTemplate /> > should render articles 1`] = `
 <DocumentFragment>
   <div
     class="min-h-screen max-h-screen min-w-screen max-w-screen flex flex-col overflow-x-hidden"

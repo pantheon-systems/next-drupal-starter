@@ -5,7 +5,7 @@ import { GradientPlaceholder } from './grid'
 
 // For use with withGrid
 export const RecipeGridItem = ({ content: recipe, multiLanguage, locale }) => {
-	const imgSrc = recipe?.field_media_image?.field_media_image?.uri?.url || '';
+	const imgSrc = recipe?.field_media_image?.field_media_image?.uri?.url || null;
 	return (
 		<Link
 			passHref
@@ -15,7 +15,7 @@ export const RecipeGridItem = ({ content: recipe, multiLanguage, locale }) => {
 		>
 			<div className="flex flex-col rounded-lg shadow-lg overflow-hidden cursor-pointer border-2 h-full hover:border-indigo-500">
 				<div className="flex-shrink-0 relative h-40">
-					{imgSrc !== '' ? (
+					{imgSrc !== null ? (
 						<Image
 							src={IMAGE_URL + imgSrc}
 							fill

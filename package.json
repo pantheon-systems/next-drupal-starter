@@ -20,7 +20,7 @@
 		"coverage": "vitest run --coverage"
 	},
 	"dependencies": {
-		"@pantheon-systems/drupal-kit": "4.4.0",
+		"@pantheon-systems/drupal-kit": "4.5.0",
 		"@pantheon-systems/nextjs-kit": "1.7.2",
 		"@tailwindcss/typography": "^0.5.7",
 		"dotenv": "^16.0.2",

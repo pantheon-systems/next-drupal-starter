@@ -9,6 +9,7 @@ import { IMAGE_URL } from '../../lib/constants';
 
 import { ContentWithImage } from '@pantheon-systems/nextjs-kit';
 import Layout from '../../components/layout';
+import styles from './[...slug].module.css';
 
 export default function ArticleTemplate({
 	article,
@@ -34,9 +35,10 @@ export default function ArticleTemplate({
 						? {
 								src: IMAGE_URL + imgSrc,
 								alt: thumbnail?.resourceIdObjMeta?.alt,
-							}
+						  }
 						: undefined
 				}
+				contentClassName={`${styles.content} text-gray-700 max-w-screen-lg`}
 			/>
 		</Layout>
 	);

@@ -1,0 +1,14 @@
+	.container {
+		width: 50vw;
+	}
+	
+	.container > h2 {
+		@apply mb-8 text-center;
+		font-size: 2rem;
+	}
+
+	.container > a {
+		@apply underline;
+		font-size: 1.25rem;
+	}
+

@@ -1,7 +1,8 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import { IMAGE_URL } from '../lib/constants';
-import { GradientPlaceholder } from './grid'
+import { GradientPlaceholder } from './grid';
+import styles from './grid.module.css';
 
 // For use with withGrid
 export const RecipeGridItem = ({ content: recipe, multiLanguage, locale }) => {
@@ -13,8 +14,10 @@ export const RecipeGridItem = ({ content: recipe, multiLanguage, locale }) => {
 				recipe.path.alias
 			}`}
 		>
-			<div className="flex flex-col rounded-lg shadow-lg overflow-hidden cursor-pointer border-2 h-full hover:border-indigo-500">
-				<div className="flex-shrink-0 relative h-40">
+			<div
+				className={`${styles.card} rounded-lg cursor-pointer h-full overflow-x-hidden`}
+			>
+				<div className="shrink-0 h-40 relative">
 					{imgSrc !== null ? (
 						<Image
 							src={IMAGE_URL + imgSrc}
@@ -26,11 +29,11 @@ export const RecipeGridItem = ({ content: recipe, multiLanguage, locale }) => {
 						<GradientPlaceholder />
 					)}
 				</div>
-				<h2 className="my-4 mx-6 text-xl leading-7 font-semibold text-gray-900">
+				<h2 className={`${styles.cardTitle} font-semibold py-4 px-6`}>
 					{recipe.title} &rarr;
 				</h2>
 				{recipe?.field_recipe_category?.length > 0 ? (
-					<span className="text-right pb-2 pr-3 text-sm text-slate-400">
+					<span className={`${styles.recipeCategory} text-right`}>
 						{recipe?.field_recipe_category[0].name}
 					</span>
 				) : null}

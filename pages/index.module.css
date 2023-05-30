@@ -1,0 +1,25 @@
+.header {
+	display: flex column;
+	font-size: 3.5rem;
+	margin: 5rem auto 0;
+}
+
+.header h1 > a {
+	@apply font-medium;
+}
+.next:hover {
+	@apply underline;
+}
+
+.onPantheon {
+	@apply items-center bg-black rounded text-white flex flex-row font-normal mt-8 py-4 px-7 w-fit;
+	font-size: 1.5rem;
+}
+
+/* sm breakpoint */
+@media (max-width: 320px) {
+	.onPantheon {
+		@apply flex-col;
+		margin: 0 auto;
+	}
+}

@@ -15,13 +15,16 @@
 		"build:mono": "next build",
 		"start:mono": "next start",
 		"lint": "next lint",
+		"lint:fix": "next lint --fix && npm run prettier:fix",
+		"prettier": "prettier \"**/*.{js,jsx,md}\" --check --ignore-path .prettierignore",
+		"prettier:fix": "prettier \"**/*.{js,jsx,,md}\" --write --ignore-path .prettierignore",
 		"test": "vitest run",
 		"update-snapshots": "vitest run --update --silent",
 		"coverage": "vitest run --coverage"
 	},
 	"dependencies": {
-		"@pantheon-systems/drupal-kit": "4.5.0",
-		"@pantheon-systems/nextjs-kit": "1.7.2",
+		"@pantheon-systems/drupal-kit": "4.6.0",
+		"@pantheon-systems/nextjs-kit": "1.7.3",
 		"@tailwindcss/typography": "^0.5.7",
 		"dotenv": "^16.0.2",
 		"next": "^13.1.5",
@@ -32,8 +35,8 @@
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.12",
-		"postcss": "^8.4.16",
-		"tailwindcss": "^3.1.8",
+		"postcss": "^8.4.21",
+		"tailwindcss": "^3.3.2",
 		"@testing-library/react": "13.4.0",
 		"@vitejs/plugin-react": "^3.0.1",
 		"c8": "^7.12.0",
@@ -41,6 +44,7 @@
 		"eslint": "^8.32.0",
 		"eslint-config-next": "^13.1.5",
 		"msw": "^1.0.0",
+		"prettier": "^2.7.1",
 		"typescript": "4.8.4",
 		"vite": "^4.0.4",
 		"vitest": "^0.28.3"

@@ -1,0 +1,35 @@
+.container {
+	min-width: 1024px;
+	font-size: 1.25rem;
+}
+
+.content {
+	@apply my-0 mx-auto;
+}
+
+.content > ul {
+	@apply pl-6;
+}
+
+.content > a {
+	@apply mb-8;
+	display: inherit;
+}
+
+.content > a,
+.content > ul a {
+	@apply font-medium underline;
+}
+
+.content > ul li {
+	@apply pl-3;
+	list-style: disc;
+	margin: 1rem 0;
+}
+
+/* lg breakpoint */
+@media (min-width: 1024px) {
+	.content {
+		@apply max-w-screen-md;
+	}
+}

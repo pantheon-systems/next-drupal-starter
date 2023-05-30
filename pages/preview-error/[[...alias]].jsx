@@ -6,6 +6,7 @@ import {
 	getCurrentLocaleStore,
 	globalDrupalStateStores,
 } from '../../lib/stores';
+import styles from './preview-error.module.css';
 
 export default function PreviewError({ footerMenu, preview }) {
 	const {
@@ -13,10 +14,8 @@ export default function PreviewError({ footerMenu, preview }) {
 	} = useRouter();
 	return (
 		<Layout footerMenu={footerMenu} preview={true}>
-			<div className="flex flex-col mx-auto prose-xl mt-20 w-1/2">
-				<h2 className="text-center">
-					🛑 {error ? error : 'There was an error on the server'} 🛑
-				</h2>
+			<div className={`${styles.container} flex flex-col mb-0 mx-auto mt-20`}>
+				<h2>🛑 {error ? error : 'There was an error on the server'} 🛑</h2>
 				{message ? <p>{message}</p> : null}
 				<Link href="/" className="underline">
 					Go Home

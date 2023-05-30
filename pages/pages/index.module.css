@@ -1,0 +1,13 @@
+.content {
+	margin: 3rem auto;
+}
+
+.content > ul h2 {
+	@apply font-bold mb-8;
+	font-size: 1.75rem;
+}
+
+.notFound {
+	margin: 3.5rem auto 0;
+	font-size: 1.75rem;
+}

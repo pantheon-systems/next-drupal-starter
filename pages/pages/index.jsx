@@ -1,15 +1,16 @@
-import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
-import { isMultiLanguage } from '../../lib/isMultiLanguage.js';
 import { sortDate } from '@pantheon-systems/nextjs-kit';
+import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
+import { isMultiLanguage } from '../../lib/isMultiLanguage.js';
 import {
 	getCurrentLocaleStore,
 	globalDrupalStateStores,
-} from '../../lib/stores';
+} from '../../lib/stores.js';
 
+import Link from 'next/link';
 import Layout from '../../components/layout';
 import PageHeader from '../../components/page-header';
-import Link from 'next/link';
+import styles from './index.module.css';
 
 export default function PageListTemplate({
 	hrefLang,
@@ -26,30 +27,32 @@ export default function PageListTemplate({
 				languageAlternates={hrefLang || false}
 			/>{' '}
 			<PageHeader title="Pages" />
-			<div className="mt-12 mx-auto max-w-[50vw]">
-			{sortedPages ? (
-				<ul>
-				{sortedPages?.map(({ id, title, body, path }) => (
-					<li className="prose justify-items-start mt-8" key={id}>
-						<h2>{title}</h2>
-						{body.summary ? (
-							<div dangerouslySetInnerHTML={{ __html: body?.summary }} />
-							) : null}
-							<Link
-								passHref
-								href={`${
-									multiLanguage ? `/${path?.langcode || locale}` : ''
-								}${path.alias}`}
-								className="font-normal underline"
-							>
-								Read more →
-							</Link>
-						</li>
+			<div className={`${styles.content} flex flex-col max-w-screen-md`}>
+				{sortedPages ? (
+					<ul>
+						{sortedPages?.map(({ id, title, body, path }) => (
+							<li key={id}>
+								<h2>{title}</h2>
+								{body.summary ? (
+									<div dangerouslySetInnerHTML={{ __html: body?.summary }} />
+								) : null}
+								<Link
+									passHref
+									href={`${
+										multiLanguage ? `/${path?.langcode || locale}` : ''
+									}${path.alias}`}
+									className="underline"
+								>
+									Read more →
+								</Link>
+							</li>
 						))}
 					</ul>
-					) : (
-					<h2 className="text-xl text-center mt-14">No pages found 🏜</h2>
-					)}
+				) : (
+					<h2 className={`${styles.notFound} font-semibold text-center`}>
+						No pages found 🏜
+					</h2>
+				)}
 			</div>
 		</Layout>
 	);

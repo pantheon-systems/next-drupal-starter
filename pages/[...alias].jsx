@@ -7,6 +7,7 @@ import { IMAGE_URL } from '../lib/constants';
 import Link from 'next/link';
 import Layout from '../components/layout';
 import { ContentWithImage, Recipe } from '@pantheon-systems/nextjs-kit';
+import styles from './catch-all.module.css';
 
 export default function CatchAllRoute({
 	pageData,
@@ -22,15 +23,19 @@ export default function CatchAllRoute({
 			} = pageData;
 			return (
 				<>
-					<article className="prose lg:prose-xl mt-10 mx-auto">
-						<h1>{title}</h1>
-						<Link passHref href="/pages" className="font-normal">
+					<article
+						className={`${styles.container} flex flex-col max-w-screen-md`}
+					>
+						<h1 className={`${styles.containerTitle} font-extrabold mb-12`}>
+							{title}
+						</h1>
+						<Link passHref href="/pages">
 							Pages &rarr;
 						</Link>
-							<div
-								className="mt-12 max-w-lg mx-auto lg:max-w-screen-lg"
-								dangerouslySetInnerHTML={{ __html: processed }}
-							/>
+						<div
+							className={`${styles.content} text-gray-700 mt-12`}
+							dangerouslySetInnerHTML={{ __html: processed }}
+						/>
 					</article>
 				</>
 			);
@@ -54,7 +59,7 @@ export default function CatchAllRoute({
 							? {
 									src: IMAGE_URL + imgSrc,
 									alt: thumbnail?.resourceIdObjMeta?.alt,
-								}
+							  }
 							: undefined
 					}
 				/>
@@ -81,7 +86,7 @@ export default function CatchAllRoute({
 							? {
 									src: IMAGE_URL + imgSrc,
 									alt: thumbnail?.resourceIdObjMeta?.alt,
-								}
+							  }
 							: undefined
 					}
 					ingredients={field_ingredients}
@@ -92,7 +97,9 @@ export default function CatchAllRoute({
 
 		return (
 			<>
-				<h2 className="text-xl text-center mt-14">No content found 🏜</h2>
+				<h2 className={`${styles.noContent} mt-14 text-center`}>
+					No content found 🏜
+				</h2>
 			</>
 		);
 	};

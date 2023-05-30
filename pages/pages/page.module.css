@@ -1,0 +1,36 @@
+.container {
+	min-width: 640px;
+	margin: 2.5rem auto;
+}
+
+.containerTitle {
+	font-size: 2.5rem;
+}
+
+.container > a {
+	@apply underline;
+}
+
+.content {
+	@apply text-gray-700 max-w-screen-md;
+	margin: 2.5rem auto;
+	min-width: 640px;
+	font-size: 1.25rem;
+}
+
+
+.content > p  {
+	@apply mb-2 mt-6;
+}
+
+/* lg breakpoint */
+@media (min-width: 1024px) {
+	.container > h1 {
+		font-size: 3.5rem;
+	}
+
+	.content {
+		min-width: 768px;
+	}
+}
+

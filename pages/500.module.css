@@ -1,0 +1,11 @@
+.errorMessage {
+	font-size: 2rem;
+}
+
+.errorMessage > span {
+	margin: 12rem auto 0;
+}
+
+.errorMessage > a {
+	@apply underline;
+}

@@ -1,0 +1,21 @@
+.layout {
+	min-height: 100dvh;
+	min-width: inherit;
+}
+
+.footerCopy > a {
+	@apply underline;
+}
+
+.footerCopy > a:first-child {
+	@apply text-white;
+}
+
+.footerCopy > a:last-child {
+	@apply text-blue-500;
+}
+
+.footerCopy > a:hover {
+	@apply text-blue-100;
+}
+

@@ -1,14 +1,15 @@
 import { NextSeo } from 'next-seo';
+import { BUILD_MODE } from '../../lib/constants';
 import { isMultiLanguage } from '../../lib/isMultiLanguage';
 import {
 	getCurrentLocaleStore,
 	globalDrupalStateStores,
 } from '../../lib/stores';
-import { BUILD_MODE } from '../../lib/constants';
 
 import { ArticleGrid } from '../../components/grid';
 import Layout from '../../components/layout';
 import PageHeader from '../../components/page-header';
+import styles from './ssg-isr.module.css';
 
 export default function SSGISRExampleTemplate({
 	articles,
@@ -25,7 +26,7 @@ export default function SSGISRExampleTemplate({
 			/>
 			<>
 				<PageHeader title="Articles" />
-				<div className="mt-8 prose lg:prose-xl max-w-lg mx-auto lg:max-w-screen-lg">
+				<div className={styles.container}>
 					<p>
 						<em>
 							By default, this starter kit is optimized for SSR and Edge Caching

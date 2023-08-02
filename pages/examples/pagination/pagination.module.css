@@ -32,3 +32,12 @@
 .item > div {
 	min-width: 640px;
 }
+
+.noData {
+	margin-top: 3rem;
+}
+
+.link {
+	text-decoration-line: underline;
+	color: #3b82f6;
+}

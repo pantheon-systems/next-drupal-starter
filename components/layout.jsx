@@ -20,7 +20,7 @@ export default function Layout({ children, footerMenu, preview = false }) {
 			<Header navItems={navItems} />
 			<main className="mb-auto">{children}</main>
 			<Footer footerMenuItems={footerMenuItems}>
-				<span className={`${styles.footerCopy} my-0 mx-auto`}>
+				<span className="my-0 mx-auto">
 					© {new Date().getFullYear()} Built with{' '}
 					<a href="https://nextjs.org/">Next.js</a> and{' '}
 					<a href="https://www.drupal.org/">Drupal</a>

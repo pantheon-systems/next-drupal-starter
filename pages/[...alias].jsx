@@ -33,7 +33,7 @@ export default function CatchAllRoute({
 							Pages &rarr;
 						</Link>
 						<div
-							className={`${styles.content} text-gray-700 mt-12`}
+							className="text-gray-700 mt-12"
 							dangerouslySetInnerHTML={{ __html: processed }}
 						/>
 					</article>

@@ -10,7 +10,7 @@
 	"author": "",
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build && cp -r .next/static .next/standalone/.next && cp -r public .next/standalone",
+		"build": "npm run decoupled-kit-health-check && next build && cp -r .next/static .next/standalone/.next && cp -r public .next/standalone",
 		"start": "node .next/standalone/server.js",
 		"build:mono": "next build",
 		"start:mono": "next start",
@@ -20,7 +20,8 @@
 		"prettier:fix": "prettier \"**/*.{js,jsx,,md}\" --write --ignore-path .prettierignore",
 		"test": "vitest run",
 		"update-snapshots": "vitest run --update --silent",
-		"coverage": "vitest run --coverage"
+		"coverage": "vitest run --coverage",
+		"decoupled-kit-health-check": "npx --prefer-offline @pantheon-systems/decoupled-kit-health-check drupal"
 	},
 	"dependencies": {
 		"@pantheon-systems/drupal-kit": "4.6.2",
@@ -34,6 +35,7 @@
 		"sharp": "^0.31.3"
 	},
 	"devDependencies": {
+		"@pantheon-systems/decoupled-kit-health-check": "0.1.0",
 		"autoprefixer": "^10.4.12",
 		"postcss": "^8.4.21",
 		"tailwindcss": "^3.3.2",

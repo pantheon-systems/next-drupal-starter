@@ -35,7 +35,7 @@
 		"sharp": "^0.31.3"
 	},
 	"devDependencies": {
-		"@pantheon-systems/decoupled-kit-health-check": "0.1.0",
+		"@pantheon-systems/decoupled-kit-health-check": "0.1.1",
 		"autoprefixer": "^10.4.12",
 		"postcss": "^8.4.21",
 		"tailwindcss": "^3.3.2",

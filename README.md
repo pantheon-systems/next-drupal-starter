@@ -1,101 +1,108 @@
-# Pantheon Decoupled Kit Next Drupal Starter
+<div align="center">
+	<picture>
+  	<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pantheon-systems/decoupled-kit-js/canary/web/static/img/W_Fist-Tagline.png">
+  	<img height="120" alt="Pantheon.io logo featuring a fist capturing lighting. Pantheon™, The Platform for Extraordinary Websites." src="https://raw.githubusercontent.com/pantheon-systems/decoupled-kit-js/canary/web/static/img/B_Fist-Tagline.png">
+	</picture>
+	<a href="https://decoupledkit.pantheon.io/docs#next-drupal-starter">
+		<h1 style="margin:auto;" align="center">Next Drupal Starter</h1>
+	</a>
+</div>
+
+For detailed documentation on the Decoupled Kit Starters, visit
+[the Decoupled Kit developer documentation](https://decoupledkit.pantheon.io).
+
+For more information on using the starter on Pantheon Front-End Sites, visit
+[the Pantheon.io platform documentation](https://docs.pantheon.io/guides/decoupled/).
 
 ## Getting Started
 
-To get started with the Next Drupal Starter, use our
-`create-pantheon-decoupled-kit`, or the "CLI". Full documentation for this npm
-package based on [npm init](https://docs.npmjs.com/cli/v8/commands/npm-init) can
-be found
-[here](https://decoupledkit.pantheon.io/docs/frontend-starters/using-the-cli) on
-our docs site.
+The Next Drupal starter requires Node.js and is built and tested on the LTS
+version which can be found on the
+[Node.js downloads page](https://nodejs.org/en/download).
 
-For a quick start, follow the instructions below:
+The starter kit supports npm, pnpm, and yarn. If you created the starer via the
+Pantheon Front-End Sites dashboard, it will use npm by default. To change this,
+delete the `package-lock.json` file and the `node-modules` folder, then run the
+install command of your preferred package manager.
 
-1. In your terminal, run the following command:
+If you created the starter via `create-pantheon-decoupled-kit`, it will detect
+the package manager used to run the command and use it install the starter's
+dependencies unless the `--noInstall` flag was used.
 
-```bash
-npm init pantheon-decoupled-kit -- next-drupal
-```
+## `@pantheon-systems` npm Packages
 
-2. Follow the prompts in your terminal to complete the setup.
+## `@pantheon-systems/drupal-kit` npm package
 
-## Pantheon npm Packages
+The Pantheon
+[`@pantheon-systems/drupal-kit`](https://www.npmjs.com/package/@pantheon-systems/drupal-kit)
+is included as a dependency in this project. This allows developers to make use
+of utility functions to simplify the process of building and maintaining a
+Front-End site on Pantheon.
 
-The `@pantheon-systems/drupal-kit` and `@pantheon-systems/nextjs-kit` are
-included as dependencies in this project. This allows developers to make use of
-utility functions and components to simplify the process of building and
-maintaining a Front-End site on Pantheon.
+API reference documentation can be found at
+https://decoupledkit.pantheon.io/docs/Packages/drupal-kit.
 
-Full documentation can be found at:
-https://github.com/pantheon-systems/decoupled-kit-js/tree/canary/web/docs/Packages
+### `create-pantheon-decoupled-kit`
 
-## Example Pages
+The `create-pantheon-decoupled-kit` npm package, or "the CLI", is the single
+source of truth for all of the JavaScript/TypeScript starter kit templates. See
+[Using the CLI](https://decoupledkit.pantheon.io/docs/frontend-starters/using-the-cli)
+for more information.
 
-- examples/auth-api - a simple example that sources data from an endpoint that
-  requires authorization.
-- examples/pagination - an example that sources paged data from JSON:API and
-  paginates it client side.
-- examples/ssg-isr - an example that is build with using ISR as the rendering
-  method. The content is identical to the /posts page.
+In addition to scaffolding new projects, a number of add-ons are available which
+can be added to an existing project. For more detailed information on the
+available add-ons, see the
+[Decoupled Kit developer documentation](https://decoupledkit.pantheon.io/docs/frontend-starters/using-the-cli#add-ons).
 
-## Customizing the Starter
+### `@pantheon-systems/decoupled-kit-health-check`
 
-For a guide on creating your first Next Drupal customization, see
-[Your First Drupal Customization](https://github.com/pantheon-systems/decoupled-kit-js/blob/canary/web/docs/Frontend%20Starters/Next.js/Next.js%20%2B%20Drupal/your-first-customization.md)
+To ensure the Decoupled Kit starter has what it needs to source data from a
+[Decoupled Kit Backend](https://decoupledkit.pantheon.io/docs/backend-starters),
+a health-check is run as a part of the the build command and will error in case
+a critical component is not met.
 
-## Tests
+See a
+[detailed description of the health-check here](https://github.com/pantheon-systems/decoupled-kit-js/tree/canary/packages/decoupled-kit-health-check#what-does-it-do).
 
-Tests are written with [`vitest`](https://vitest.dev/). All new functionality
-should have unit tests or snapshot tests where applicable. Snapshot tests are
-using
-[`@testing-library/react`](https://testing-library.com/docs/react-testing-library/intro/).
+To disable the health check, see
+[Disabling the decoupled kit health check](https://decoupledkit.pantheon.io/docs/frontend-starters/nextjs/nextjs-drupal/troubleshooting#disabling-the-decoupled-kit-health-check)
 
-Any fetch calls should be mocked with
-[`msw`](https://mswjs.io/docs/basics/request-matching) in
-[setupFile.js](./__tests__/setupFile.js).
+## Local development
 
-## Decoupled Kit Health Check
+### Lando
 
-The `@pantheon-systems/decoupled-kit-health-check` will run before your `build`
-and ensure the backend is setup for success. Helpful instructions will guide you
-in case anything in the health check fails. To disable the health check, see
-[Disabling the Decoupled Kit Health Check](https://live-decoupled-kit-docs.appa.pantheon.site/docs/frontend-starters/nextjs/nextjs-drupal/troubleshooting#disabling-the-decoupled-kit-health-check).
+To configure the starter for local development with Lando, see the
+[Decoupled Kit developer docs on Local Development](https://decoupledkit.pantheon.io/docs/backend-starters/decoupled-drupal/local-development).
 
 ### Commands
 
-This section assumes the package manager in use is `npm`. If you are not using
-`npm`, replace `npm` with the name of your package manager.
+The Decoupled Kit starters include a number of scripts defined in the
+`package.json`. To list all of these scripts, `cd` into your starter's directory
+and in a terminal use the `npm run` command.
 
-To run all tests for both profiles sequentially:
+Some commands include:
 
-```bash
-npm test
-```
+### `dev`
 
-To run the tests for a single profile in watch mode:
+Runs the starter in developer mode.
 
-```bash
-# test against the umami profile data
-npm run test:umami
-# tests against the default profile data
-npm run test:default
-```
+#### `build`
 
-### Updating Snapshots
+Runs the build step for the starter. By default, the
+`@pantheon-systems/decoupled-kit-health-check` is run before the build. This
+command is required for Pantheon Front-End Sites.
 
-Snapshots should be updated when presentational changes are made. If a new page
-route is added, create a new snapshot test for it, and include any data needed
-to run that test successfully. Please commit the updated snapshots along with
-your changes.
+#### `start`
 
-To update a snapshot:
+Runs the starter in production mode. This command is required for Pantheon
+Front-End Sites.
 
-Run the following helper command:
+### `test`
 
-```bash
-npm run update-snapshots
-```
+Runs the tests.
 
-Or, run the test for a single profile in watch mode (see above), then in the
-terminal press the **u** key. This will update the snapshot for the running
-profile Be sure to update the snapshot for both profiles.
+### `update-snapshots`
+
+Updates the snapshots used for the snapshot tests. The starter comes with an
+example snapshot test that may need to be updating depending on your
+configuration.

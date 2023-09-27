@@ -27,8 +27,8 @@
 		"decoupled-kit-health-check": "npx --prefer-offline @pantheon-systems/decoupled-kit-health-check drupal"
 	},
 	"dependencies": {
-		"@pantheon-systems/drupal-kit": "4.6.2",
-		"@pantheon-systems/nextjs-kit": "1.7.4",
+		"@pantheon-systems/drupal-kit": "4.6.3",
+		"@pantheon-systems/nextjs-kit": "1.7.5",
 		"@tailwindcss/typography": "^0.5.7",
 		"dotenv": "^16.0.2",
 		"next": "13.4.7",
@@ -38,7 +38,7 @@
 		"sharp": "^0.31.3"
 	},
 	"devDependencies": {
-		"@pantheon-systems/decoupled-kit-health-check": "0.1.2",
+		"@pantheon-systems/decoupled-kit-health-check": "0.2.0",
 		"autoprefixer": "^10.4.12",
 		"postcss": "^8.4.21",
 		"tailwindcss": "^3.3.2",

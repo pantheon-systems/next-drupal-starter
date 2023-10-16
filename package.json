@@ -27,31 +27,31 @@
 		"decoupled-kit-health-check": "npx --prefer-offline @pantheon-systems/decoupled-kit-health-check drupal"
 	},
 	"dependencies": {
-		"@pantheon-systems/drupal-kit": "4.6.3",
-		"@pantheon-systems/nextjs-kit": "1.7.5",
+		"@pantheon-systems/drupal-kit": "4.6.4",
+		"@pantheon-systems/nextjs-kit": "1.7.6",
 		"@tailwindcss/typography": "^0.5.7",
 		"dotenv": "^16.0.2",
 		"next": "13.4.7",
-		"next-seo": "^5.15.0",
+		"next-seo": "^6.1.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"sharp": "^0.31.3"
+		"sharp": "^0.32.6"
 	},
 	"devDependencies": {
-		"@pantheon-systems/decoupled-kit-health-check": "0.2.0",
-		"autoprefixer": "^10.4.12",
-		"postcss": "^8.4.21",
-		"tailwindcss": "^3.3.2",
-		"@testing-library/react": "13.4.0",
-		"@vitejs/plugin-react": "^3.0.1",
-		"c8": "^7.12.0",
+		"@pantheon-systems/decoupled-kit-health-check": "0.2.1",
+		"autoprefixer": "^10.4.16",
+		"postcss": "^8.4.30",
+		"tailwindcss": "^3.3.3",
+		"@testing-library/react": "14.0.0",
+		"@vitejs/plugin-react": "^4.1.0",
+		"@vitest/coverage-v8": "^0.34.5",
 		"eslint": "^8.24.0",
 		"eslint-config-next": "13.4.7",
 		"jsdom": "^22.1.0",
 		"msw": "^1.0.0",
-		"prettier": "^2.7.1",
-		"typescript": "4.8.4",
+		"prettier": "^3.0.3",
+		"typescript": "5.2.2",
 		"vite": "^4.0.4",
-		"vitest": "^0.28.3"
+		"vitest": "^0.34.5"
 	}
 }

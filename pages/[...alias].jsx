@@ -150,8 +150,8 @@ export async function getServerSideProps(context) {
 			resourceName === 'node--recipe'
 				? 'include=field_media_image.field_media_image,field_recipe_category'
 				: resourceName === 'node--article'
-				? 'include=field_media_image.field_media_image'
-				: '';
+				  ? 'include=field_media_image.field_media_image'
+				  : '';
 		const previewParams =
 			context.preview && (await getPreview(context, resourceName, params));
 

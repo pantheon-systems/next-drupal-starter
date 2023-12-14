@@ -59,7 +59,7 @@ export default function CatchAllRoute({
 							? {
 									src: IMAGE_URL + imgSrc,
 									alt: thumbnail?.resourceIdObjMeta?.alt,
-							  }
+								}
 							: undefined
 					}
 				/>
@@ -86,7 +86,7 @@ export default function CatchAllRoute({
 							? {
 									src: IMAGE_URL + imgSrc,
 									alt: thumbnail?.resourceIdObjMeta?.alt,
-							  }
+								}
 							: undefined
 					}
 					ingredients={field_ingredients}
@@ -150,8 +150,8 @@ export async function getServerSideProps(context) {
 			resourceName === 'node--recipe'
 				? 'include=field_media_image.field_media_image,field_recipe_category'
 				: resourceName === 'node--article'
-				  ? 'include=field_media_image.field_media_image'
-				  : '';
+					? 'include=field_media_image.field_media_image'
+					: '';
 		const previewParams =
 			context.preview && (await getPreview(context, resourceName, params));
 

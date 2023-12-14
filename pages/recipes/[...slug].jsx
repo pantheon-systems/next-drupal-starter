@@ -41,7 +41,7 @@ export default function RecipeTemplate({
 						? {
 								src: IMAGE_URL + imgSrc,
 								alt: thumbnail?.resourceIdObjMeta?.alt,
-						  }
+							}
 						: undefined
 				}
 				ingredients={field_ingredients}
